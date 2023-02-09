@@ -1,0 +1,27 @@
+.homePage_buttonWrapped {
+  width: 200px;
+  height: 66px;
+  background: #FC0A7E;
+  border-radius: 7px;
+  margin-left: 10%;
+  font-size: 25px;
+  svg {
+    height: 30%;
+    color: white;
+    path {
+      fill: white;
+    }
+  }
+  &:hover {
+    background-color: #450E4B;
+  }
+}
+
+.homePage_button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+}
