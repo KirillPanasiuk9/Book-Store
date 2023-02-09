@@ -1,0 +1,43 @@
+.homePage {
+  background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
+  width: 100%;
+  height: 100vh;
+  color: white;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 80px;
+  margin-top: 17%;
+  margin-left: 10%;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 44px;
+  margin-left: 10%;
+  margin-bottom: 30px;
+}
+
+.homePage_button {
+  width: 200px;
+  height: 66px;
+  background-color: #FC0A7E;
+  border-radius: 3px;
+  margin-left: 10%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 35px;
+  align-items: center;
+  color: white;
+  svg {
+    //width: 100%;
+    height: 25%;
+  }
+
+  &:hover {
+
+  }
+}
