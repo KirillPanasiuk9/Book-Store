@@ -24,13 +24,13 @@ const NavBar = () => {
                     <path d="M38.1342 35.8769C37.8916 35.8768 37.6574 35.7885 37.4751 35.6284C37.2928 35.4684 37.1748 35.2476 37.1433 35.007C37.1117 34.7665 37.1686 34.5227 37.3035 34.3211C37.4383 34.1194 37.6419 33.9736 37.8762 33.9109L41.7392 32.8759C41.9954 32.8072 42.2684 32.8431 42.4982 32.9757C42.7279 33.1083 42.8955 33.3267 42.9642 33.5829C43.0329 33.8391 42.997 34.1121 42.8644 34.3418C42.7318 34.5716 42.5134 34.7392 42.2572 34.8079L38.3942 35.8429C38.3094 35.8654 38.222 35.8769 38.1342 35.8769V35.8769Z" fill="black"/>
                 </svg>
             </NavLink>
-            <from className="searchForm">
+            <form className="search_form">
                 <input
                     className="search"
                     placeholder="Find the book you want"
                 />
-                <button className="searchButton">Find</button>
-            </from>
+                <button className="search_button">Find</button>
+            </form>
             <div className="menu">
                 <NavLink to={'/catalog'}>Catalog</NavLink>
                 <NavLink to={'/about'}>About</NavLink>

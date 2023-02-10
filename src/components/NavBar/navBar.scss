@@ -5,6 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: fixed;
 }
 
 .logo {
@@ -16,7 +17,7 @@
   }
 }
 
-.searchForm {
+.search_form {
   width: 30%;
   height: 50%;
   display: flex;
@@ -36,7 +37,7 @@
   }
 }
 
-.searchButton {
+.search_button {
   width: 20%;
   height: 100%;
   background: #FC0A7E;
