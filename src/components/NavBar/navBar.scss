@@ -17,39 +17,6 @@
   }
 }
 
-.search_form {
-  width: 30%;
-  height: 50%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.search {
-  width: 75%;
-  height: 100%;
-  background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
-  color: white;
-  font-size: 17px;
-  padding-left: 10px;
-  border-radius: 5px;
-  &::placeholder {
-    color: salmon;
-  }
-}
-
-.search_button {
-  width: 20%;
-  height: 100%;
-  background: #FC0A7E;
-  border-radius: 5px;
-  font-size: 18px;
-  color: white;
-  font-weight: bold;
-  &:hover {
-    background-color: #450E4B;
-  }
-}
-
 .menu {
   width: 40%;
   height: 70%;
