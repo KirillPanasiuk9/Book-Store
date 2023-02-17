@@ -1,8 +1,17 @@
 import React from 'react';
 import {NavLink} from "react-router-dom";
 import './navBar.scss'
+import {fetchItemsList} from "../../redux/async/asyncActions";
+import {useDispatch} from "react-redux";
+
 
 const NavBar = () => {
+    const dispatch = useDispatch()
+
+    const handleSearch = () => {
+        dispatch(fetchItemsList())
+    }
+
     return (
         <div className="navBar">
             <NavLink to={'/home'} className="logo">
@@ -31,6 +40,7 @@ const NavBar = () => {
                 />
                 <button className="search_button">Find</button>
             </form>
+            <button onClick={handleSearch}>async</button>
             <div className="menu">
                 <NavLink to={'/catalog'}>Catalog</NavLink>
                 <NavLink to={'/about'}>About</NavLink>

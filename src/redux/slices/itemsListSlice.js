@@ -1,4 +1,4 @@
-import {createSlice, PayloadAction} from "@reduxjs/toolkit";
+import {createSlice} from "@reduxjs/toolkit";
 
 
 const initialState = {
@@ -7,14 +7,32 @@ const initialState = {
     isError: false,
 }
 
-const itemsListReducer = createSlice({
+const itemsListSlice = createSlice({
     name: "itemsListReducer",
     initialState,
     reducers: {
 
+        isDataFetching(state) {
+            state.isLoading = true;
+            state.isError = false;
+        },
+
+        isDataFetchingSuccess(state, action) {
+            state.items = action.payload
+            state.isLoading = false;
+            state.isError = false
+            console.log(action.payload);
+        },
+
+        isDataFetchingError(state) {
+            state.isLoading = false;
+            state.isError = true;
+        },
     }
+
 })
 
 
 
-export default itemsListReducer.reducer
+export default itemsListSlice.reducer
+export const {isDataFetching, isDataFetchingSuccess, isDataFetchingError} = itemsListSlice.actions

@@ -1,9 +1,9 @@
 import {combineReducers} from "redux";
 import {configureStore} from "@reduxjs/toolkit";
-import itemsListReducer from './slices/itemsListSlice'
+import itemsListSlice from './slices/itemsListSlice'
 
 const rootReducer = combineReducers({
-    itemsListReducer,
+    itemsListSlice,
 })
 
 export const setupStore = () => {
