@@ -11,7 +11,7 @@ const CatalogPage = () => {
         <div className="catalogPage">
             <NavBar/>
             <div className="catalog_list">
-                {/*{itemList.}*/}
+                {itemList.map(item => <Item item={item}/>)}
             </div>
         </div>
     );
