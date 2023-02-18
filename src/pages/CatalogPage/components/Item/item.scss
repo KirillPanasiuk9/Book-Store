@@ -1,7 +1,8 @@
 .item_box {
-  min-width: 18%;
-  max-width: 18%;
-  min-height: 35vh;
+  min-width: 19%;
+  max-width: 19%;
+  min-height: 39vh;
+  max-height: 39vh;
   //border: 2px black solid;
   border-radius: 15px;
   padding: 0.5%;
@@ -20,7 +21,7 @@
   height: 100%;
   border-radius: 10px;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
 }
 
@@ -34,19 +35,23 @@
 
 .item_title {
   //border: 2px black solid;
-  height: 5%;
+  height: 3.8%;
   width: 90%;
+  overflow: hidden;
 }
 
 .item_author {
   //border: 2px black solid;
-  height: 5%;
+  font-size: 12px;
+  height: 3.8%;
   width: 90%;
+  overflow: hidden;
 }
 
 .item_price {
   //border: 2px black solid;
-  height: 5%;
+  font-size: 12px;
+  height: 4%;
   width: 90%;
 }
 
