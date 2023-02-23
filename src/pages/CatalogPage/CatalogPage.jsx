@@ -47,14 +47,15 @@ const CatalogPage = () => {
             </div>
             <ReactPaginate
                 pageCount={pageCount}
-                previousLabel={"Previous"}
-                nextLabel={"Next"}
+                previousLabel={"❮"}
+                nextLabel={"❯"}
                 onPageChange={changePage}
                 containerClassName={"paginationContainer"}
                 previousLinkClassName={"paginationButton"}
                 nextLinkClassName={"paginationButton"}
                 disabledClassName={"paginationDisable"}
                 activeClassName={"paginationActive"}
+                pageClassName={"paginationElement"}
             />
         </div>
     );

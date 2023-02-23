@@ -1,7 +1,7 @@
 .paginationContainer {
-  border: 2px black solid;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   width: 30%;
   height: 30px;
   font-size: 25px;
@@ -9,13 +9,44 @@
 }
 
 .paginationButton {
-
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color: #1d2a35!important;
 }
 
 .paginationDisable {
-
+  color: gray;
+  background-color: rebeccapurple;
+  border-radius: 50px;
 }
 
 .paginationActive {
+  border: 2px #FC0A7E solid;
+  border-radius: round(10);
+}
 
+.paginationElement {
+  background-color: #1d2a35!important;
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 20px;
+  :hover{
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 20px;
+    transform: translateY(-2px);
+    box-shadow: 0px 10px 20px 2px white;
+  }
 }
