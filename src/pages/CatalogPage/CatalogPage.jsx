@@ -21,9 +21,14 @@ const CatalogPage = () => {
         setPageNumber(selected)
     }
 
-
     const handleSearch = () => {
         dispatch(fetchItemsList(search))
+    }
+
+    const handleKeySearch = (event) => {
+        if(event.key === "Enter") {
+            dispatch(fetchItemsList(search))
+        }
     }
 
     return (
@@ -36,14 +41,14 @@ const CatalogPage = () => {
                     type={"text"}
                     value={search}
                     onChange={event => setSearch(event.target.value)}
-                    onKeyDown={event => event.key === "Enter" ? handleSearch() : ""}
+                    onKeyDown={event => handleKeySearch(event)}
                 />
                 <button className="search_button" onClick={handleSearch}>Search</button>
             </div>
             <div className="catalog_list">
                 {itemList
                     .slice(pagesVisited, pagesVisited + itemsPerPage)
-                    .map(item => <Item item={item}/>)}
+                    .map(item => <Item item={item} key={item.id}/>)}
             </div>
             <ReactPaginate
                 pageCount={pageCount}
