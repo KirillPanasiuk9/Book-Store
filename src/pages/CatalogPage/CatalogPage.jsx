@@ -7,6 +7,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {fetchItemsList} from "../../redux/async/asyncActions";
 import ReactPaginate from "react-paginate";
 
+
 const CatalogPage = () => {
     const itemList = useSelector(state => state.itemsListSlice.items)
     const dispatch = useDispatch();

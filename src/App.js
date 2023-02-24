@@ -9,15 +9,13 @@ import ItemPage from "./pages/ItemPage/ItemPage";
 
 function App() {
   return (
-      <>
-        <Routes>
-          <Route path={'/home'} element={<HomePage />} />
-          <Route path={'/catalog'} element={<CatalogPage />} />
-          <Route path={'/about'} element={<AboutPage />} />
-          <Route path={'/cart'} element={<CartPage />} />
-          <Route path={'/item'} element={<ItemPage />} />
-        </Routes>
-      </>
+    <Routes>
+      <Route path={'/home'} element={<HomePage />} />
+      <Route path={'/catalog'} element={<CatalogPage />} />
+      <Route path={'/about'} element={<AboutPage />} />
+      <Route path={'/cart'} element={<CartPage />} />
+      <Route path={'/item'} element={<ItemPage />} />
+    </Routes>
   );
 }
 
