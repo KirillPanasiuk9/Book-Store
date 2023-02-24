@@ -1,60 +1,97 @@
 .itemPage {
-  background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
+  //background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
+  background-color: #1d2a35!important;
   width: 100%;
   min-height: 100vh;
   color: white;
-  display: inline-block;
+  //display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 .container {
-  margin-top: 100px;
-  border: 1px black solid;
-  width: 900px;
+  margin-top: 120px;
+  //border: 1px black solid;
+  max-width: 94%;
   height: 700px;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  align-items: center;
+  //align-items: center;
 }
 
 .image {
-  border: 1px black solid;
-  width: 40%;
-  height: 60%;
+  //border: 2px black solid;
+  width: 37%;
+  height: 70%;
+  img{
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .information {
-
+  //border: 2px black solid;
+  width: 57%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .title {
-
+  font-size: 28px;
+  font-weight: bold;
 }
 
 .author {
-
+  font-size: 18px;
+  color: gainsboro;
 }
 
 .category {
-
+  font-size: 18px;
 }
 
 .price {
-
+  font-size: 22px;
+  font-weight: bold;
 }
 
 .coverSelector {
-
+  display: flex;
+  width: 205px;
+  justify-content: space-between;
 }
 
 .coverType {
-
+  border: 2px #04AA6D solid;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button {
-
+  width: 50%;
+  height: 50px;
+  background: #04AA6D;
+  border-radius: 7px;
+  font-size: 25px;
+  color: white;
+  svg {
+    margin-left: 10px;
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke-width: 3;
+  }
+  &:hover {
+    background-color: #450E4B;
+  }
 }
 
 .description {
-
+  font-size: 20px;
 }

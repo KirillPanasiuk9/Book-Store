@@ -1,4 +1,4 @@
-.homePage_buttonWrapped {
+.homePage_buttonWrapper {
   width: 200px;
   height: 66px;
   background: #FC0A7E;
@@ -8,6 +8,8 @@
   svg {
     height: 30%;
     color: white;
+    fill: none;
+    stroke-width: 3;
     path {
       fill: white;
     }

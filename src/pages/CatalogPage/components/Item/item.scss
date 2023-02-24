@@ -23,7 +23,8 @@
   align-items: center;
   font-size: 14px;
   //background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
-  background-color: #1d2a35!important;
+  //background-color: #1d2a35!important;
+  background-color: rgb(21,32,43);
 }
 
 .item_image {
@@ -64,7 +65,8 @@
   justify-content: center;
   align-items: center;
   border-radius: 5px;
-  background-color: #FC0A7E;
+  //background-color: #FC0A7E;
+  background-color: #04AA6D;
   &:hover {
     background: #450E4B;
   }

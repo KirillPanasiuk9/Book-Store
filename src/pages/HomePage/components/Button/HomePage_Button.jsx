@@ -5,7 +5,7 @@ import {NavLink} from "react-router-dom";
 const HomePage_Button = () => {
     return (
         <button
-            className='homePage_buttonWrapped'
+            className='homePage_buttonWrapper'
         >
             <NavLink to={'/catalog'} className="homePage_button">
                 Shop
