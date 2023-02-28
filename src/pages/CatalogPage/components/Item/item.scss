@@ -3,13 +3,17 @@
   max-width: 19%;
   min-height: 39vh;
   max-height: 39vh;
-  //border: 2px black solid;
   border-radius: 15px;
   padding: 0.5%;
   background-color: #38444d;
   margin-bottom: 20px;
   margin-left: 5%;
   margin-right: 5%;
+  transition: 0.3s;
+  &:hover {
+    background-color: #04AA6D;
+    box-shadow: 0px 0px 5px 0px #04AA6D
+  }
 }
 
 .item_content {
@@ -25,6 +29,7 @@
   //background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
   //background-color: #1d2a35!important;
   background-color: rgb(21,32,43);
+  color: white;
 }
 
 .item_image {
