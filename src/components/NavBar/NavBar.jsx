@@ -1,16 +1,10 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import {NavLink} from "react-router-dom";
 import './navBar.scss'
 import {useSelector} from "react-redux";
 
 const NavBar = () => {
-
     const cartItems = useSelector(state => state.cartListSlice.cartItems)
-
-    useEffect(() => {
-        console.log(cartItems);
-    })
-
 
     return (
         <div className="navBar">

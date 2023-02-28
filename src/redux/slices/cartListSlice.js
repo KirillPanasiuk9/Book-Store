@@ -12,11 +12,10 @@ const cartListSlice = createSlice({
 
         addToCartAction(state, action) {
             state.cartItems.push(action.payload)
-            console.log(action.payload);
         },
 
         removeFromCartAction(state, action) {
-            state.cartItems.filter(item => item.id !== action.payload.id)
+            state.cartItems = state.cartItems.filter(item => item.id !== action.payload.id)
         }
     }
 })
