@@ -8,9 +8,12 @@ import {addToCartAction, removeFromCartAction} from "../../redux/slices/cartList
 
 const ItemPage = () => {
     const [isInCart, setIsInCart] = useState(false)
+    const [cover, setCover] = useState("soft")
     const location = useLocation()
     const dispatch = useDispatch()
     const {title, authors, image, category, description} = location.state
+    // const softCover = document.getElementById("soft")
+    // const solidCover = document.getElementById("solid")
 
     const addToCart = () => {
         dispatch(addToCartAction(location.state))
@@ -20,6 +23,22 @@ const ItemPage = () => {
     const removeFromCart = () => {
         dispatch(removeFromCartAction(location.state))
         setIsInCart(prevState => !prevState)
+    }
+
+    const handleSoftCover = () => {
+        const softCover = document.getElementById("soft")
+        const solidCover = document.getElementById("solid")
+        softCover.style.backgroundColor = "#04AA6D"
+        solidCover.style.backgroundColor = "transparent"
+        setCover("Soft")
+    }
+
+    const handleSolidCover = () => {
+        const softCover = document.getElementById("soft")
+        const solidCover = document.getElementById("solid")
+        softCover.style.backgroundColor = "transparent"
+        solidCover.style.backgroundColor = "#04AA6D"
+        setCover("Solid")
     }
 
     const buttonStyle = () => {
@@ -69,8 +88,8 @@ const ItemPage = () => {
                     <p className="category">{category}</p>
                     <p className="price">$100</p>
                     <div className="coverSelector">
-                        <div className="coverType">Soft Cover</div>
-                        <div className="coverType">Solid Cover</div>
+                        <div id="soft" className="coverType" onClick={handleSoftCover}>Soft Cover</div>
+                        <div id="solid" className="coverType" onClick={handleSolidCover}>Solid Cover</div>
                     </div>
                     {buttonStyle()}
                     <div className="description">{description}</div>
