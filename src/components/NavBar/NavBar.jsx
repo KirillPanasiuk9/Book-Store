@@ -1,8 +1,16 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavLink} from "react-router-dom";
 import './navBar.scss'
+import {useSelector} from "react-redux";
 
 const NavBar = () => {
+
+    const cartItems = useSelector(state => state.cartListSlice.cartItems)
+
+    useEffect(() => {
+        console.log(cartItems);
+    })
+
 
     return (
         <div className="navBar">
@@ -41,7 +49,7 @@ const NavBar = () => {
                         </path>
                     </svg>
                     <div className="purchases">
-                        0
+                        {cartItems.length}
                     </div>
                 </NavLink>
             </div>

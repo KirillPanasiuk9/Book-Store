@@ -2,11 +2,19 @@ import React from 'react';
 import NavBar from "../../components/NavBar/NavBar";
 import "./itemPage.scss"
 import {useLocation} from "react-router";
+import {useDispatch} from "react-redux";
+import {addToCartAction} from "../../redux/slices/cartListSlice";
 
 
 const ItemPage = () => {
     const location = useLocation()
+    const dispatch = useDispatch()
     const {title, authors, image, category, description} = location.state
+
+    const addToCart = () => {
+        dispatch(addToCartAction(location.state))
+        console.log(location.state);
+    }
 
     return (
         <div className="itemPage">
@@ -24,7 +32,10 @@ const ItemPage = () => {
                         <div className="coverType">Soft Cover</div>
                         <div className="coverType">Solid Cover</div>
                     </div>
-                    <button className="button">
+                    <button
+                        className="button"
+                        onClick={addToCart}
+                    >
                         Add to cart
                         <svg
                             viewBox="0 0 24 24"

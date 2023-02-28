@@ -12,19 +12,19 @@ const itemsListSlice = createSlice({
     initialState,
     reducers: {
 
-        isDataFetching(state) {
+        isDataFetchingAction(state) {
             state.isLoading = true;
             state.isError = false;
         },
 
-        isDataFetchingSuccess(state, action) {
+        isDataFetchingSuccessAction(state, action) {
             state.items = action.payload
             state.isLoading = false;
             state.isError = false
             console.log(action.payload);
         },
 
-        isDataFetchingError(state) {
+        isDataFetchingErrorAction(state) {
             state.isLoading = false;
             state.isError = true;
         },
@@ -35,4 +35,4 @@ const itemsListSlice = createSlice({
 
 
 export default itemsListSlice.reducer
-export const {isDataFetching, isDataFetchingSuccess, isDataFetchingError} = itemsListSlice.actions
+export const {isDataFetchingAction, isDataFetchingSuccessAction, isDataFetchingErrorAction} = itemsListSlice.actions
