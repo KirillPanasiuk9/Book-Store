@@ -1,10 +1,12 @@
 .homePage_buttonWrapper {
   width: 200px;
   height: 66px;
-  background: #FC0A7E;
+  //background: #FC0A7E;
+  background-color: #04AA6D;
   border-radius: 7px;
   margin-left: 10%;
   font-size: 25px;
+  transition: 0.3s;
   svg {
     height: 30%;
     color: white;
