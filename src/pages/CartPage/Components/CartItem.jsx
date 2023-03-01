@@ -1,13 +1,23 @@
 import React from 'react';
 import "./cartItem.scss"
+import {useDispatch} from "react-redux";
+import {removeFromCartAction} from "../../../redux/slices/cartListSlice";
 
-const CartItem = () => {
+const CartItem = ({item}) => {
+    const dispatch = useDispatch()
+    const {title, authors} = item
+    const image = item.image
+
+    const removeItem = () => {
+        dispatch(removeFromCartAction(item))
+    }
+
     return (
         <div className="cartItem">
-            <img className="cart_image"/>
+            <img className="cart_image" src={image}/>
             <div className="cart_info">
-                <div className="cart_title">title</div>
-                <div className="cart_author">authors</div>
+                <div className="cart_title">{title}</div>
+                <div className="cart_author">{authors}</div>
             </div>
             <div className="changeQuantity">
                 <button className="quantityButton">-</button>
@@ -16,7 +26,12 @@ const CartItem = () => {
             </div>
             <div className="priceBox">
                 <p className="totalBookPrice">$300</p>
-                <button className="deleteItem">Delete</button>
+                <button
+                    className="deleteItem"
+                    onClick={removeItem}
+                >
+                    Delete
+                </button>
             </div>
         </div>
     );
