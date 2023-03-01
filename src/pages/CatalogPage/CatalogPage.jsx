@@ -14,9 +14,9 @@ const CatalogPage = () => {
     const [search, setSearch] = useState("");
 
     const [pageNumber, setPageNumber] = useState(0)
-    const itemsPerPage = 9;
+    const itemsPerPage = 9; //todo: out of the component with capital
     const pagesVisited = pageNumber * itemsPerPage
-    const pageCount = Math.ceil(itemList.length / itemsPerPage)
+    const pageCount = Math.ceil(itemList.length / itemsPerPage) //todo: how to keep just calculable vars in  component
 
     const changePage = ({selected}) => {
         setPageNumber(selected)
@@ -41,8 +41,8 @@ const CatalogPage = () => {
                     placeholder="Find the book you want"
                     type={"text"}
                     value={search}
-                    onChange={event => setSearch(event.target.value)}
-                    onKeyDown={event => handleKeySearch(event)}
+                    onChange={event => setSearch(event.target.value)} //todo: add handler
+                    onKeyDown={handleKeySearch}
                 />
                 <button className="search_button" onClick={handleSearch}>Search</button>
             </div>

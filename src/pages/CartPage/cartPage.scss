@@ -1,0 +1,51 @@
+.cartPage {
+  background-color: #1d2a35!important;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  display: inline-block;
+}
+
+.content {
+  border: 1px black solid;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  min-height: 100%;
+  margin: 100px 3% 3% 3%;
+}
+
+.cartList {
+  border: 1px black solid;
+  width: 70%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 20px;
+}
+
+.checkoutBox {
+  border: 1px black solid;
+  //position: fixed;
+  width: 30%;
+  //min-height: 100%;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+}
+
+.booksCount {
+  border: 1px black solid;
+}
+
+.totalPrice {
+  border: 1px black solid;
+}
+
+.submit {
+  border: 1px black solid;
+}

@@ -40,7 +40,7 @@ const ItemPage = () => {
         solidCover.style.backgroundColor = "#04AA6D"
         setCover("Solid")
     }
-
+    // useMemo try
     const buttonStyle = () => {
         if (!isInCart) {
             return <button
