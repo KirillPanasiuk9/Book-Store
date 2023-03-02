@@ -11,7 +11,10 @@ const cartListSlice = createSlice({
     reducers: {
 
         addToCartAction(state, action) {
-            state.cartItems.push(action.payload)
+            state.cartItems.push({
+                ...action.payload,
+                cover: "",
+            })
         },
 
         removeFromCartAction(state, action) {

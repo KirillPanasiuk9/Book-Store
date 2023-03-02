@@ -20,7 +20,6 @@
 }
 
 .search {
-  border: white 2px solid;
   width: 75%;
   height: 100%;
   //background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
@@ -31,6 +30,9 @@
   border-radius: 5px;
   &::placeholder {
     color: gray;
+  }
+  &:focus {
+    border: $hoverColor 2px solid;
   }
 }
 

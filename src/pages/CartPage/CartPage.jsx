@@ -17,8 +17,8 @@ const CartPage = () => {
                     )}
                 </div>
                 <div className="checkoutBox">
-                    <p className="booksCount">You have 3 books for order</p>
-                    <p className="totalPrice">Total price is $1000</p>
+                    <p className="booksCount">You have <span>3</span> books for order</p>
+                    <p className="totalPrice">Total price is <span>$1000</span></p>
                     <button className="submit">Submit my order</button>
                 </div>
             </div>

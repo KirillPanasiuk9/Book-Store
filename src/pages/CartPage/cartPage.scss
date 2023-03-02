@@ -10,16 +10,17 @@
 }
 
 .content {
-  border: 1px black solid;
+  //border: 1px black solid;
   display: flex;
   justify-content: center;
   flex-direction: row;
+  gap: 7%;
   min-height: 100%;
   margin: 100px 3% 3% 3%;
 }
 
 .cartList {
-  border: 1px black solid;
+  //border: 1px black solid;
   width: 70%;
   height: 100%;
   display: flex;
@@ -29,26 +30,49 @@
 }
 
 .checkoutBox {
-  border: 1px black solid;
+  border: 3px $hoverColor solid;
+  border-radius: 10px;
   //position: fixed;
   width: 30%;
+  height: 25vh;
   //min-height: 100%;
-  margin-top: 30px;
+  //margin-top: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-around;
   align-items: center;
-  gap: 50px;
+  //gap: 50px;
 }
 
 .booksCount {
-  border: 1px black solid;
+  //border: 1px black solid;
+  font-size: 20px;
+  span {
+    font-size: 25px;
+    color: $buttonColor;
+  }
 }
 
 .totalPrice {
-  border: 1px black solid;
+  //border: 1px black solid;
+  font-size: 20px;
+  span {
+    font-size: 25px;
+    color: $buttonColor;
+  }
 }
 
 .submit {
-  border: 1px black solid;
+  width: 90%;
+  height: 15%;
+  border-radius: 7px;
+  font-size: 20px;
+  color: $fontColor;
+  background-color: $buttonColor;
+  &:hover {
+    background-color: $hoverColor;
+  }
+  &:active {
+    background-color: $hoverColor;
+  }
 }

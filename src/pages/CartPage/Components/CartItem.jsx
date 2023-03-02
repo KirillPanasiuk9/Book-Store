@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./cartItem.scss"
 import {useDispatch} from "react-redux";
 import {removeFromCartAction} from "../../../redux/slices/cartListSlice";
@@ -11,6 +11,8 @@ const CartItem = ({item}) => {
     const category = item.categories
     const description = item.description
     const id = item.id
+
+    const [countBook, setCountBook] = useState(0)
 
     const removeItem = () => {
         dispatch(removeFromCartAction(item))
@@ -27,8 +29,8 @@ const CartItem = ({item}) => {
                 <div className="cart_cover">Solid Cover</div>
             </div>
             <div className="changeQuantity">
-                <button className="quantityButton">-</button>
-                <span className="quantity">4</span>
+                <button className="quantityButton">−</button>
+                <span className="quantity">{countBook}</span>
                 <button className="quantityButton">+</button>
             </div>
             <div className="priceBox">
