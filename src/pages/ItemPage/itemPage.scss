@@ -1,14 +1,18 @@
+@import "src/assets/colors";
+
 .itemPage {
-  background-color: #1d2a35!important;
+  //background-color: #1d2a35!important;
+  background-color: $backgroundColor;
   width: 100%;
   min-height: 100vh;
-  color: white;
+  //color: white;
   display: flex;
   justify-content: center;
 }
 
 .container {
   margin-top: 120px;
+  margin-bottom: 20px;
   border: 1px black solid;
   max-width: 94%;
   height: 100%;
@@ -43,7 +47,7 @@
 
 .author {
   font-size: 18px;
-  color: gainsboro;
+  //color: gainsboro;
 }
 
 .category {
@@ -62,7 +66,7 @@
 }
 
 .coverType {
-  border: 2px #04AA6D solid;
+  border: 2px $hoverColor solid;
   width: 100px;
   height: 30px;
   display: flex;
@@ -74,10 +78,10 @@
 .button {
   width: 50%;
   height: 50px;
-  background: #04AA6D;
+  background: $buttonColor;
   border-radius: 7px;
   font-size: 25px;
-  color: white;
+  color: $fontColor;
   transition: 0.3s;
   svg {
     margin-left: 10px;
@@ -87,12 +91,12 @@
     stroke-width: 3;
   }
   &:hover {
-    background-color: #450E4B;
+    background-color: $hoverColor;
   }
 }
 
 .addButton {
-  border: 2px #04AA6D solid;
+  border: 2px $hoverColor solid;
   background: none;
 }
 
@@ -100,18 +104,18 @@
   align-items: center;
   display: flex;
   justify-content: center;
+  background-color: $hoverColor;
   svg {
     width: 30px;
     height: 30px;
-    fill: white;
+    fill: $fontColor;
     stroke-width: 10;
-  }
-  &:hover {
-    background: #04AA6D;
   }
 }
 
 .description {
   border: 2px black solid;
   font-size: 20px;
+  font-weight: 200;
+  line-height: normal;
 }

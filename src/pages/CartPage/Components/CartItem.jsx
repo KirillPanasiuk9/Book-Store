@@ -24,6 +24,7 @@ const CartItem = ({item}) => {
             <div className="cart_info">
                 <div className="cart_title">{title}</div>
                 <div className="cart_author">{authors}</div>
+                <div className="cart_cover">Solid Cover</div>
             </div>
             <div className="changeQuantity">
                 <button className="quantityButton">-</button>

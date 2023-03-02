@@ -1,4 +1,6 @@
-*{
+@import "src/assets/colors";
+
+* {
   padding: 0;
   margin: 0;
   border: 0;
@@ -34,5 +36,6 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 body {
-  //font-family: 'Gothic A1';
+  font-family: 'Oswald', sans-serif;
+  color: $fontColor;
 }

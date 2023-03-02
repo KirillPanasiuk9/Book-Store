@@ -1,3 +1,5 @@
+@import "src/assets/colors";
+
 .paginationContainer {
   display: flex;
   justify-content: space-between;
@@ -5,7 +7,7 @@
   width: 30%;
   height: 30px;
   font-size: 25px;
-  margin: 0 auto 10px auto;
+  margin: 30px auto 30px auto;
 }
 
 .paginationButton {
@@ -16,23 +18,23 @@
   height: 40px;
   border-radius: 50px;
   //background-color: #1d2a35!important;
-  background-color: #04AA6D;
+  background-color: $buttonColor;
 }
 
 .paginationDisable {
   color: gray;
-  background-color: rebeccapurple;
+  background-color: gray;
   border-radius: 50px;
 }
 
 .paginationActive {
-  border: 2px #FC0A7E solid;
+  border: 2px $hoverColor solid;
   border-radius: round(10);
 }
 
 .paginationElement {
   //background-color: #1d2a35!important;
-  background-color: #04AA6D;
+  background-color: $buttonColor;
   width: 30px;
   height: 30px;
   border-radius: 50px;

@@ -1,23 +1,25 @@
+@import "src/assets/colors";
+
 .homePage_buttonWrapper {
   width: 200px;
   height: 66px;
   //background: #FC0A7E;
-  background-color: #04AA6D;
+  background-color: $buttonColor;
   border-radius: 7px;
   margin-left: 10%;
   font-size: 25px;
   transition: 0.3s;
   svg {
     height: 30%;
-    color: white;
+    color: $fontColor;
     fill: none;
     stroke-width: 3;
     path {
-      fill: white;
+      fill: $fontColor;
     }
   }
   &:hover {
-    background-color: #450E4B;
+    background-color: $hoverColor;
   }
 }
 
@@ -27,5 +29,5 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: white;
+  color: $fontColor;
 }
