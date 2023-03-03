@@ -6,6 +6,7 @@ import {useSelector} from "react-redux";
 
 const CartPage = () => {
     const items = useSelector(state => state.cartListSlice.cartItems)
+    const booksCount = items.reduce((p,c) => p + c.count, 0)
 
     return (
         <div className="cartPage">
@@ -17,7 +18,7 @@ const CartPage = () => {
                     )}
                 </div>
                 <div className="checkoutBox">
-                    <p className="booksCount">You have <span>3</span> books for order</p>
+                    <p className="booksCount">You have <span>{booksCount}</span> books for order</p>
                     <p className="totalPrice">Total price is <span>$1000</span></p>
                     <button className="submit">Submit my order</button>
                 </div>

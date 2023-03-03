@@ -1,7 +1,11 @@
 import React, {useState} from 'react';
 import "./cartItem.scss"
-import {useDispatch} from "react-redux";
-import {removeFromCartAction} from "../../../redux/slices/cartListSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {
+    decrementQuantityAction,
+    incrementQuantityAction,
+    removeFromCartAction
+} from "../../../redux/slices/cartListSlice";
 import {Link} from "react-router-dom";
 
 const CartItem = ({item}) => {
@@ -11,8 +15,22 @@ const CartItem = ({item}) => {
     const category = item.categories
     const description = item.description
     const id = item.id
+    const currentBook = useSelector(state => state.cartListSlice.cartItems.filter(book => book.id === id))
 
-    const [countBook, setCountBook] = useState(0)
+    const countBook = () => {
+        // console.log(currentBook[0].count);
+        return currentBook[0].count
+    }
+
+    const increment = () => {
+        dispatch(incrementQuantityAction(item))
+    }
+
+    const decrement = () => {
+        dispatch(decrementQuantityAction(item))
+    }
+
+    // console.log(currentBook);
 
     const removeItem = () => {
         dispatch(removeFromCartAction(item))
@@ -29,9 +47,9 @@ const CartItem = ({item}) => {
                 <div className="cart_cover">Solid Cover</div>
             </div>
             <div className="changeQuantity">
-                <button className="quantityButton">−</button>
-                <span className="quantity">{countBook}</span>
-                <button className="quantityButton">+</button>
+                <button className="quantityButton" onClick={decrement}>−</button>
+                <span className="quantity">{countBook()}</span>
+                <button className="quantityButton" onClick={increment}>+</button>
             </div>
             <div className="priceBox">
                 <p className="totalBookPrice">$300</p>
