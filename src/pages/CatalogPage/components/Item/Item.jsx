@@ -11,6 +11,7 @@ const Item = ({item}) => {
     const category = item.volumeInfo.categories
     const description = item.volumeInfo.description
     const id = item.id
+    const price = 100
 
     const isInCart = useSelector(state =>
         state.cartListSlice.cartItems
@@ -18,7 +19,7 @@ const Item = ({item}) => {
     )
 
     const addToCart = () => {
-        dispatch(addToCartAction({title, authors, image, category, description, id}))
+        dispatch(addToCartAction({title, authors, image, category, description, id, price}))
     }
 
     const itemButton = () => {
@@ -34,15 +35,16 @@ const Item = ({item}) => {
         }
     }
 
+
     return (
         <div className="item_box">
             <div className="item_content">
-                <Link to={'/item'} state={{title, authors, image, category, description, id}}>
+                <Link to={'/item'} state={{title, authors, image, category, description, id, price}}>
                     <img className="item_image" src={image}/>
                 </Link>
                 <div className="item_title">{title}</div>
                 <div className="item_author">{authors}</div>
-                <div className="item_price">$100</div>
+                <div className="item_price">${price}</div>
                 {itemButton()}
             </div>
         </div>

@@ -10,7 +10,7 @@ const ItemPage = () => {
     const [cover, setCover] = useState("soft")
     const location = useLocation()
     const dispatch = useDispatch()
-    const {title, authors, image, category, description, id} = location.state
+    const {title, authors, image, category, description, id, price} = location.state
     const isInCart = useSelector(state =>
         state.cartListSlice.cartItems
             .filter(item => item.id === id)[0] !== undefined
@@ -79,7 +79,7 @@ const ItemPage = () => {
                     <p className="title">{title}</p>
                     <p className="author">{authors}</p>
                     <p className="category">{category}</p>
-                    <p className="price">$100</p>
+                    <p className="price">${price}</p>
                     <div className="coverSelector">
                         <div id="soft" className="coverType" onClick={handleSoftCover}>Soft Cover</div>
                         <div id="solid" className="coverType" onClick={handleSolidCover}>Solid Cover</div>

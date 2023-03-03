@@ -1,36 +1,22 @@
-import React, {useState} from 'react';
+import React from 'react';
 import "./cartItem.scss"
 import {useDispatch, useSelector} from "react-redux";
-import {
-    decrementQuantityAction,
-    incrementQuantityAction,
-    removeFromCartAction
-} from "../../../redux/slices/cartListSlice";
+import {decrementQuantityAction, incrementQuantityAction, removeFromCartAction} from "../../../redux/slices/cartListSlice";
 import {Link} from "react-router-dom";
 
 const CartItem = ({item}) => {
     const dispatch = useDispatch()
-    const {title, authors} = item
-    const image = item.image
-    const category = item.categories
-    const description = item.description
-    const id = item.id
-    const currentBook = useSelector(state => state.cartListSlice.cartItems.filter(book => book.id === id))
-
-    const countBook = () => {
-        // console.log(currentBook[0].count);
-        return currentBook[0].count
-    }
+    const {title, authors, image, category, description, id, totalPrice, count} = item
 
     const increment = () => {
         dispatch(incrementQuantityAction(item))
     }
 
     const decrement = () => {
-        dispatch(decrementQuantityAction(item))
+        if(count === 1) {
+          console.log("disable")
+        } else {dispatch(decrementQuantityAction(item))}
     }
-
-    // console.log(currentBook);
 
     const removeItem = () => {
         dispatch(removeFromCartAction(item))
@@ -47,12 +33,12 @@ const CartItem = ({item}) => {
                 <div className="cart_cover">Solid Cover</div>
             </div>
             <div className="changeQuantity">
-                <button className="quantityButton" onClick={decrement}>−</button>
-                <span className="quantity">{countBook()}</span>
+                <button id="decrement" className="quantityButton" onClick={decrement}>−</button>
+                <span className="quantity">{count}</span>
                 <button className="quantityButton" onClick={increment}>+</button>
             </div>
             <div className="priceBox">
-                <p className="totalBookPrice">$300</p>
+                <p className="totalBookPrice">${totalPrice}</p>
                 <button
                     className="deleteItem"
                     onClick={removeItem}

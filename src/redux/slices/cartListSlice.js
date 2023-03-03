@@ -15,6 +15,7 @@ const cartListSlice = createSlice({
                 ...action.payload,
                 cover: "Soft Cover",
                 count: 1,
+                totalPrice: action.payload.price
             })
         },
 
@@ -25,11 +26,13 @@ const cartListSlice = createSlice({
         incrementQuantityAction(state, action) {
             const index = state.cartItems.findIndex(item => item.id === action.payload.id)
             state.cartItems[index].count += 1;
+            state.cartItems[index].totalPrice += action.payload.price;
         },
 
         decrementQuantityAction(state, action) {
             const index = state.cartItems.findIndex(item => item.id === action.payload.id)
             state.cartItems[index].count -= 1;
+            state.cartItems[index].totalPrice -= action.payload.price;
         }
     }
 })
