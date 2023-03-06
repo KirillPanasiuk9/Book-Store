@@ -20,6 +20,7 @@ const Item = ({item}) => {
     )
 
     const addToCart = () => {
+        console.log(image);
         dispatch(addToCartAction({title, authors, image, category, description, id, price, cover}))
     }
 
@@ -36,12 +37,20 @@ const Item = ({item}) => {
         }
     }
 
+    const itemImage = () => {
+        if (image === undefined) {
+            return <img className="item_image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png"/>
+        } else {
+            return <img className="item_image" src={image}/>
+        }
+    }
+
 
     return (
         <div className="item_box">
             <div className="item_content">
                 <Link to={'/item'} state={{title, authors, image, category, description, id, price}}>
-                    <img className="item_image" src={image}/>
+                    {itemImage()}
                 </Link>
                 <div className="item_title">{title}</div>
                 <div className="item_author">{authors}</div>

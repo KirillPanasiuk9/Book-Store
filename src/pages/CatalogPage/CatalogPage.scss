@@ -1,12 +1,10 @@
 @import "src/assets/colors";
 
 .catalogPage {
-  //background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
   //background-color: #1d2a35!important;
   background-color: $backgroundColor;
   width: 100%;
   min-height: 100vh;
-  //color: white;
   display: inline-block;
 }
 
@@ -14,7 +12,7 @@
   margin: 0 auto;
   width: 80%;
   height: 50px;
-  margin-top: 100px;
+  margin-top: 12vh;
   display: flex;
   justify-content: space-between;
 }
@@ -22,9 +20,8 @@
 .search {
   width: 75%;
   height: 100%;
-  //background: linear-gradient(287.15deg, #450E4B 0%, #3C0C41 24.48%, rgba(207, 0, 99, 0) 100%), #CF0063;
   background-color: $buttonColor;
-  color: white;
+  color:$fontColor;
   font-size: 25px;
   padding-left: 10px;
   border-radius: 5px;
@@ -39,7 +36,6 @@
 .search_button {
   width: 15%;
   height: 100%;
-  //background: #FC0A7E;
   background-color: $buttonColor;
   border-radius: 5px;
   font-size: 18px;
@@ -56,9 +52,7 @@
   display: flex;
   justify-content: center;
   flex-direction: row;
-  gap: 5%;
   flex-wrap: wrap;
-  width: 100%;
   min-height: 100vh;
 }
 

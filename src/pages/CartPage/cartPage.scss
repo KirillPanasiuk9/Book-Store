@@ -10,17 +10,15 @@
 }
 
 .content {
-  //border: 1px black solid;
   display: flex;
   justify-content: center;
   flex-direction: row;
   gap: 7%;
   min-height: 100%;
-  margin: 100px 3% 3% 3%;
+  margin: 12vh 3% 3% 3%;
 }
 
 .cartList {
-  //border: 1px black solid;
   width: 70%;
   height: 100%;
   display: flex;
@@ -32,20 +30,15 @@
 .checkoutBox {
   border: 3px $hoverColor solid;
   border-radius: 10px;
-  //position: fixed;
-  width: 30%;
+  width: 20%;
   height: 25vh;
-  //min-height: 100%;
-  //margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  //gap: 50px;
 }
 
 .booksCount {
-  //border: 1px black solid;
   font-size: 20px;
   span {
     font-size: 25px;
@@ -54,7 +47,6 @@
 }
 
 .totalPrice {
-  //border: 1px black solid;
   font-size: 20px;
   span {
     font-size: 25px;
