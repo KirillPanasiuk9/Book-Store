@@ -1,7 +1,6 @@
 @import "src/assets/colors";
 
 .itemPage {
-  //background-color: #1d2a35!important;
   background-color: $backgroundColor;
   width: 100%;
   min-height: 100vh;
@@ -12,8 +11,7 @@
 .container {
   margin-top: 12vh;
   margin-bottom: 20px;
-  border: 1px black solid;
-  max-width: 94%;
+  width: 85%;
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -21,18 +19,16 @@
 }
 
 .image {
-  border: 2px black solid;
-  width: 37%;
-  height: 70%;
+  width: 30%;
+  height: 70vh;
   img{
-    min-width: 100%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
   }
 }
 
 .information {
-  border: 2px black solid;
-  width: 57%;
+  width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -111,7 +107,6 @@
 }
 
 .description {
-  border: 2px black solid;
   font-size: 20px;
   font-weight: 200;
   line-height: normal;
