@@ -7,7 +7,7 @@ import {addToCartAction} from "../../redux/slices/cartListSlice";
 
 
 const ItemPage = () => {
-    const [cover, setCover] = useState("soft")
+    const [cover, setCover] = useState("Soft")
     const location = useLocation()
     const dispatch = useDispatch()
     const {title, authors, image, category, description, id, price} = location.state
@@ -20,7 +20,7 @@ const ItemPage = () => {
     // const solidCover = document.getElementById("solid")
 
     const addToCart = () => {
-        dispatch(addToCartAction(location.state))
+        dispatch(addToCartAction({title, authors, image, category, description, id, price, cover}))
     }
 
     const handleSoftCover = () => {

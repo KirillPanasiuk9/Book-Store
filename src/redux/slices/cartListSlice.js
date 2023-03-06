@@ -13,8 +13,9 @@ const cartListSlice = createSlice({
         addToCartAction(state, action) {
             state.cartItems.push({
                 ...action.payload,
-                cover: "Soft Cover",
+                cover: action.payload.cover,
                 count: 1,
+                price: action.payload.price,
                 totalPrice: action.payload.price
             })
         },

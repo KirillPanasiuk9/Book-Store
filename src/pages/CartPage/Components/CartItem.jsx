@@ -6,7 +6,7 @@ import {Link} from "react-router-dom";
 
 const CartItem = ({item}) => {
     const dispatch = useDispatch()
-    const {title, authors, image, category, description, id, totalPrice, count} = item
+    const {title, authors, image, category, description, id, totalPrice, count, cover, price} = item
 
     const increment = () => {
         dispatch(incrementQuantityAction(item))
@@ -24,13 +24,13 @@ const CartItem = ({item}) => {
 
     return (
         <div className="cartItem">
-            <Link to={'/item'} state={{title, authors, image, category, description, id}}>
+            <Link to={'/item'} state={{title, authors, image, category, description, id, price}}>
                 <img className="cart_image" src={image}/>
             </Link>
             <div className="cart_info">
                 <div className="cart_title">{title}</div>
                 <div className="cart_author">{authors}</div>
-                <div className="cart_cover">Solid Cover</div>
+                <div className="cart_cover">{cover} Cover</div>
             </div>
             <div className="changeQuantity">
                 <button id="decrement" className="quantityButton" onClick={decrement}>−</button>

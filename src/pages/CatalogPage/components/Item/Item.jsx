@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './item.scss'
 import {Link} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
@@ -12,6 +12,7 @@ const Item = ({item}) => {
     const description = item.volumeInfo.description
     const id = item.id
     const price = 100
+    const cover = "Soft"
 
     const isInCart = useSelector(state =>
         state.cartListSlice.cartItems
@@ -19,7 +20,7 @@ const Item = ({item}) => {
     )
 
     const addToCart = () => {
-        dispatch(addToCartAction({title, authors, image, category, description, id, price}))
+        dispatch(addToCartAction({title, authors, image, category, description, id, price, cover}))
     }
 
     const itemButton = () => {

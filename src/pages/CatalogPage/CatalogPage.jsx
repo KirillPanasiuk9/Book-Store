@@ -6,10 +6,12 @@ import './pagination.scss';
 import {useDispatch, useSelector} from "react-redux";
 import {fetchItemsList} from "../../redux/async/asyncActions";
 import ReactPaginate from "react-paginate";
+import Loader from "../../components/Loader/Loader";
 
 
 const CatalogPage = () => {
     const itemList = useSelector(state => state.itemsListSlice.items)
+    const isLoading = useSelector(state => state.itemsListSlice.isLoading)
     const dispatch = useDispatch();
     const [search, setSearch] = useState("");
 
@@ -46,23 +48,44 @@ const CatalogPage = () => {
                 />
                 <button className="search_button" onClick={handleSearch}>Search</button>
             </div>
-            <div className="catalog_list">
-                {itemList
-                    .slice(pagesVisited, pagesVisited + itemsPerPage)
-                    .map(item => <Item item={item} key={item.id}/>)}
-            </div>
-            <ReactPaginate
-                pageCount={pageCount}
-                previousLabel={"❮"}
-                nextLabel={"❯"}
-                onPageChange={changePage}
-                containerClassName={"paginationContainer"}
-                previousLinkClassName={"paginationButton"}
-                nextLinkClassName={"paginationButton"}
-                disabledClassName={"paginationDisable"}
-                activeClassName={"paginationActive"}
-                pageClassName={"paginationElement"}
-            />
+
+            {isLoading
+                ?
+                <Loader />
+                :
+                <>
+                    <div className="catalog_list">
+                        {itemList
+                            .slice(pagesVisited, pagesVisited + itemsPerPage)
+                            .map(item => <Item item={item} key={item.id}/>)}
+                    </div>
+                    <ReactPaginate
+                        pageCount={pageCount}
+                        previousLabel={"❮"}
+                        nextLabel={"❯"}
+                        onPageChange={changePage}
+                        containerClassName={"paginationContainer"}
+                        previousLinkClassName={"paginationButton"}
+                        nextLinkClassName={"paginationButton"}
+                        disabledClassName={"paginationDisable"}
+                        activeClassName={"paginationActive"}
+                        pageClassName={"paginationElement"}
+                    />
+                </>
+            }
+
+            {/*<ReactPaginate*/}
+            {/*    pageCount={pageCount}*/}
+            {/*    previousLabel={"❮"}*/}
+            {/*    nextLabel={"❯"}*/}
+            {/*    onPageChange={changePage}*/}
+            {/*    containerClassName={"paginationContainer"}*/}
+            {/*    previousLinkClassName={"paginationButton"}*/}
+            {/*    nextLinkClassName={"paginationButton"}*/}
+            {/*    disabledClassName={"paginationDisable"}*/}
+            {/*    activeClassName={"paginationActive"}*/}
+            {/*    pageClassName={"paginationElement"}*/}
+            {/*/>*/}
         </div>
     );
 };
