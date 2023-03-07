@@ -20,7 +20,6 @@ const Item = ({item}) => {
     )
 
     const addToCart = () => {
-        console.log(image);
         dispatch(addToCartAction({title, authors, image, category, description, id, price, cover}))
     }
 

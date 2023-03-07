@@ -53,13 +53,23 @@
   font-weight: bold;
 }
 
-.coverSelector {
+.coversBlock {
   display: flex;
   width: 205px;
   justify-content: space-between;
 }
 
 .coverType {
+  border: 2px $hoverColor solid;
+  width: 100px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selectedCover {
+  background-color: $hoverColor;
   border: 2px $hoverColor solid;
   width: 100px;
   height: 30px;

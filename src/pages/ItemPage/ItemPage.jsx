@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import NavBar from "../../components/NavBar/NavBar";
 import "./itemPage.scss"
 import {useLocation} from "react-router";
@@ -11,33 +11,46 @@ const ItemPage = () => {
     const location = useLocation()
     const dispatch = useDispatch()
     const {title, authors, image, category, description, id, price} = location.state
-    const isInCart = useSelector(state =>
-        state.cartListSlice.cartItems
-            .filter(item => item.id === id)[0] !== undefined
-    )
+    const coverFromCart = useSelector(state => state.cartListSlice.cartItems.filter(item => item.id === id)[0]?.cover)
+    const isInCart = useSelector(state => state.cartListSlice.cartItems.filter(item => item.id === id)[0] !== undefined)
 
-    // const softCover = document.getElementById("soft")
-    // const solidCover = document.getElementById("solid")
+    useEffect(() => {
+        handleCover()
+    }, [])
+
 
     const addToCart = () => {
         dispatch(addToCartAction({title, authors, image, category, description, id, price, cover}))
     }
 
-    const handleSoftCover = () => {
+    const handleCover = () => {
         const softCover = document.getElementById("soft")
         const solidCover = document.getElementById("solid")
-        softCover.style.backgroundColor = "#93443F"
-        solidCover.style.backgroundColor = "transparent"
-        setCover("Soft")
+        if(coverFromCart === "Solid") {
+            softCover.classList.remove("selectedCover")
+            solidCover.classList.add("selectedCover")
+        } else {
+            softCover.classList.add("selectedCover")
+            solidCover.classList.remove("selectedCover")
+        }
     }
 
-    const handleSolidCover = () => {
+
+
+    const handleCoverSelector = (event) => {
         const softCover = document.getElementById("soft")
         const solidCover = document.getElementById("solid")
-        softCover.style.backgroundColor = "transparent"
-        solidCover.style.backgroundColor = "#93443F"
-        setCover("Solid")
+        if(event.target.id === "soft") {
+            setCover("Soft")
+            softCover.classList.add("selectedCover")
+            solidCover.classList.remove("selectedCover")
+        } else {
+            setCover("Solid")
+            softCover.classList.remove("selectedCover")
+            solidCover.classList.add("selectedCover")
+        }
     }
+
     // useMemo try
     const buttonStyle = () => {
         if (isInCart) {
@@ -80,9 +93,9 @@ const ItemPage = () => {
                     <p className="author">{authors}</p>
                     <p className="category">{category}</p>
                     <p className="price">${price}</p>
-                    <div className="coverSelector">
-                        <div id="soft" className="coverType" onClick={handleSoftCover}>Soft Cover</div>
-                        <div id="solid" className="coverType" onClick={handleSolidCover}>Solid Cover</div>
+                    <div className="coversBlock">
+                        <div id="soft" className="coverType" onClick={handleCoverSelector}>Soft Cover</div>
+                        <div id="solid" className="coverType" onClick={handleCoverSelector}>Solid Cover</div>
                     </div>
                     {buttonStyle()}
                     <div className="description">{description}</div>
