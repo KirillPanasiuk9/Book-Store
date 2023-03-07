@@ -25,12 +25,20 @@ const CatalogPage = () => {
     }
 
     const handleSearch = () => {
-        dispatch(fetchItemsList(search))
+        let input = document.getElementById("searchInput");
+        if (search) {
+            dispatch(fetchItemsList(search))
+            input.classList.remove("search-error");
+        } else {input.classList.add("search-error")}
     }
 
     const handleKeySearch = (event) => {
         if(event.key === "Enter") {
-            dispatch(fetchItemsList(search))
+            let input = document.getElementById("searchInput");
+            if (search) {
+                dispatch(fetchItemsList(search))
+                input.classList.remove("search-error");
+            } else {input.classList.add("search-error")}
         }
     }
 
@@ -40,6 +48,7 @@ const CatalogPage = () => {
             <div className="search_form">
                 <input
                     className="search"
+                    id="searchInput"
                     placeholder="Find the book you want"
                     type={"text"}
                     value={search}
@@ -73,19 +82,6 @@ const CatalogPage = () => {
                     />
                 </>
             }
-
-            {/*<ReactPaginate*/}
-            {/*    pageCount={pageCount}*/}
-            {/*    previousLabel={"❮"}*/}
-            {/*    nextLabel={"❯"}*/}
-            {/*    onPageChange={changePage}*/}
-            {/*    containerClassName={"paginationContainer"}*/}
-            {/*    previousLinkClassName={"paginationButton"}*/}
-            {/*    nextLinkClassName={"paginationButton"}*/}
-            {/*    disabledClassName={"paginationDisable"}*/}
-            {/*    activeClassName={"paginationActive"}*/}
-            {/*    pageClassName={"paginationElement"}*/}
-            {/*/>*/}
         </div>
     );
 };
