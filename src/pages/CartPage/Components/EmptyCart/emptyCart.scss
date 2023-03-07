@@ -1,0 +1,20 @@
+@import "src/assets/colors";
+
+.emptyCart {
+  margin-top: 100px;
+  svg {
+    width: 20vw;
+    height: 20vh;
+    path {
+      fill: $hoverColor
+    }
+  }
+  div {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $fontColor;
+    font-size: 30px;
+  }
+}
