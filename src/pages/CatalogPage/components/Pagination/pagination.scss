@@ -1,4 +1,4 @@
-@import "src/assets/colors";
+@import "../../../../assets/colors";
 
 .paginationContainer {
   display: flex;
@@ -33,7 +33,6 @@
 }
 
 .paginationElement {
-  //background-color: #1d2a35!important;
   background-color: $buttonColor;
   width: 30px;
   height: 30px;
