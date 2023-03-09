@@ -4,6 +4,7 @@ import "./itemPage.scss"
 import {useLocation} from "react-router";
 import {useDispatch, useSelector} from "react-redux";
 import {addToCartAction} from "../../redux/slices/cartListSlice";
+import Footer from "../../components/Footer/Footer";
 
 
 const ItemPage = () => {
@@ -82,26 +83,29 @@ const ItemPage = () => {
 
 
     return (
-        <div className="itemPage">
-            <NavBar/>
-            <div className="container">
-                <div className="image">
-                    <img src={image}/>
-                </div>
-                <div className="information">
-                    <p className="title">{title}</p>
-                    <p className="author">{authors}</p>
-                    <p className="category">{category}</p>
-                    <p className="price">${price}</p>
-                    <div className="coversBlock">
-                        <div id="soft" className="coverType" onClick={handleCoverSelector}>Soft Cover</div>
-                        <div id="solid" className="coverType" onClick={handleCoverSelector}>Solid Cover</div>
+        <>
+            <div className="itemPage">
+                <NavBar/>
+                <div className="container">
+                    <div className="image">
+                        <img src={image}/>
                     </div>
-                    {buttonStyle()}
-                    <div className="description">{description}</div>
+                    <div className="information">
+                        <p className="title">{title}</p>
+                        <p className="author">{authors}</p>
+                        <p className="category">{category}</p>
+                        <p className="price">${price}</p>
+                        <div className="coversBlock">
+                            <div id="soft" className="coverType" onClick={handleCoverSelector}>Soft Cover</div>
+                            <div id="solid" className="coverType" onClick={handleCoverSelector}>Solid Cover</div>
+                        </div>
+                        {buttonStyle()}
+                        <div className="description">{description}</div>
+                    </div>
                 </div>
             </div>
-        </div>
+            <Footer/>
+        </>
     );
 };
 

@@ -25,12 +25,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  color: $fontColor;
   font-size: 20px;
   a {
-    color: $fontColor;
+    color: #d1d0c5;
     &:hover {
-      font-weight: bold;
+      transition: 0.2s;
+      color: white;
     }
   }
 }
@@ -41,10 +41,14 @@
   svg {
     width: 30px;
     height: 30px;
-    color: $fontColor;
+    color: #d1d0c5;
+    &:hover {
+      transition: 0.2s;
+      color: white;
+    }
   }
   .purchases {
-    color: $fontColor;
+    color: #d1d0c5;
     margin-left: 6px;
   }
 }

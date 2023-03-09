@@ -1,10 +1,11 @@
 import React, {useState} from 'react';
 import Item from "../Item/Item";
 import Pagination from "../Pagination/Pagination";
+import "./catalogList.scss"
 import {useSelector} from "react-redux";
 
 
-const ItemsList = () => {
+const CatalogList = () => {
     const itemList = useSelector(state => state.itemsListSlice.items)
     const itemsPerPage = 9
     const [pageNumber, setPageNumber] = useState(0)
@@ -26,4 +27,4 @@ const ItemsList = () => {
     );
 };
 
-export default ItemsList;
+export default CatalogList;

@@ -1,11 +1,12 @@
 import React, {useState} from 'react';
 import NavBar from "../../components/NavBar/NavBar";
-import './CatalogPage.scss';
+import './catalogPage.scss';
 import './components/Pagination/pagination.scss';
 import {useDispatch, useSelector} from "react-redux";
 import {fetchItemsList} from "../../redux/async/asyncActions";
 import Loader from "../../components/Loader/Loader";
-import ItemsList from "./components/ItemsList/ItemsList";
+import CatalogList from "./components/CatalogList/CatalogList";
+import Footer from "../../components/Footer/Footer";
 
 
 const CatalogPage = () => {
@@ -46,7 +47,8 @@ const CatalogPage = () => {
                 />
                 <button className="search_button" onClick={handleSearch}>Search</button>
             </div>
-            {isLoading ? <Loader /> : <ItemsList/>}
+            {isLoading ? <Loader /> : <CatalogList/>}
+            <Footer/>
         </div>
     );
 };
