@@ -10,7 +10,7 @@
   font-size: 18px;
   h2 {
     font-size: 20px;
-    color: $hoverColor;
+    color: $buttonColor;
   }
 }
 
@@ -37,7 +37,6 @@
 .contacts {
   display: flex;
   flex-direction: column;
-  //justify-content: space-between;
   align-items: flex-end;
   flex: 1;
   h1 {
@@ -47,7 +46,7 @@
     color: #d1d0c5;
     &:hover {
       transition: 0.2s;
-      color: $hoverColor;
+      color: $buttonColor;
     }
   }
   h3 {
@@ -64,7 +63,7 @@
     width: 30px;
     &:hover {
       transition: 0.2s;
-      fill: $hoverColor;
+      fill: $buttonColor;
     }
   }
 }

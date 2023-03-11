@@ -1,7 +1,6 @@
 @import "src/assets/colors";
 
 .catalogPage {
-  //background-color: #1d2a35!important;
   background-color: $backgroundColor;
   width: 100%;
   min-height: 100vh;
@@ -9,10 +8,9 @@
 }
 
 .search_form {
-  margin: 0 auto;
+  margin: 12vh auto 0 auto;
   width: 80%;
   height: 50px;
-  margin-top: 12vh;
   display: flex;
   justify-content: space-between;
 }
@@ -20,7 +18,8 @@
 .search {
   width: 75%;
   height: 100%;
-  background-color: $buttonColor;
+  background-color: $itemsColor;
+  border: 1px solid #2E2E2E;
   color:$fontColor;
   font-size: 25px;
   padding-left: 10px;
@@ -29,7 +28,7 @@
     color: gray;
   }
   &:focus {
-    border: $hoverColor 2px solid;
+    border: $buttonColor 2px solid;
   }
 }
 
@@ -64,7 +63,7 @@
   font-weight: bold;
   transition: 0.3s;
   &:hover {
-    background-color: $hoverColor;
+    opacity: 0.7
   }
 }
 

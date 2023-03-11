@@ -16,8 +16,8 @@ const Pagination = ({itemList, setPageNumber, itemsPerPage}) => {
             nextLabel={"❯"}
             onPageChange={changePage}
             containerClassName={"paginationContainer"}
-            previousLinkClassName={"paginationButton"}
-            nextLinkClassName={"paginationButton"}
+            previousLinkClassName={"next"}
+            nextLinkClassName={"previous"}
             disabledClassName={"paginationDisable"}
             activeClassName={"paginationActive"}
             pageClassName={"paginationElement"}

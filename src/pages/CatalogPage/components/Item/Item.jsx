@@ -47,15 +47,13 @@ const Item = ({item}) => {
 
     return (
         <div className="item_box">
-            <div className="item_content">
-                <Link to={'/item'} state={{title, authors, image, category, description, id, price}}>
-                    {itemImage()}
-                </Link>
-                <div className="item_title">{title}</div>
-                <div className="item_author">{authors}</div>
-                <div className="item_price">${price}</div>
-                {itemButton()}
-            </div>
+            <Link to={'/item'} state={{title, authors, image, category, description, id, price}}>
+                {itemImage()}
+            </Link>
+            <div className="item_title">{title}</div>
+            <div className="item_author">{authors}</div>
+            <div className="item_price">${price}</div>
+            {itemButton()}
         </div>
     );
 };
