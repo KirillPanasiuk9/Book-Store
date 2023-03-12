@@ -1,10 +1,10 @@
 import React from 'react';
 import NavBar from "../../components/NavBar/NavBar";
 import "./cartPage.scss"
-import CartItem from "./Components/CartItem/CartItem";
+import CartItem from "./components/CartItem/CartItem";
 import {useSelector} from "react-redux";
-import CheckoutBox from "./Components/CheckoutBox/CheckoutBox";
-import EmptyCart from "./Components/EmptyCart/EmptyCart";
+import CheckoutBox from "./components/CheckoutBox/CheckoutBox";
+import EmptyCart from "./components/EmptyCart/EmptyCart";
 import Footer from "../../components/Footer/Footer";
 
 

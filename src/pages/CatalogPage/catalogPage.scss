@@ -28,14 +28,20 @@
     color: gray;
   }
   &:focus {
-    border: $buttonColor 2px solid;
+    border: $buttonColor 1px solid;
+    box-shadow: 0 0 0 9999px black;
+    opacity: 0.8;
+    z-index: 9999;
+    transition: 0.3s;
+    &::placeholder {
+      color: #4E4E4E;
+    }
   }
 }
 
 .search-error {
   width: 75%;
   height: 100%;
-  background-color: $buttonColor;
   color:$fontColor;
   font-size: 25px;
   padding-left: 10px;

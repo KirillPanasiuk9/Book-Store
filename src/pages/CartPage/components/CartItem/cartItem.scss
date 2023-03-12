@@ -32,20 +32,19 @@
 
 .cart_title {
   font-size: 25px;
-  height: 30%;
+  min-height: 30%;
+  margin-bottom: 10px;
+  height: content-box;
+  overflow: hidden;
 }
 
 .cart_author {
+  color: #8e8e8e;
   height: 30%;
 }
 
 .cart_cover {
   background-color: $itemsColor;
-  height: 30px;
-  width: 70px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .changeQuantity {
